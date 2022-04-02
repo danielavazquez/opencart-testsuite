@@ -2,6 +2,7 @@ package testCases;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -94,7 +95,7 @@ public class TC_003_LoginDDT extends BaseClass{
 	@DataProvider(name="LoginData")
 	public String [][] getData() throws IOException
 	{
-		String path="./testData/Opencart_LoginData.xlsx";
+		String path=".\\testData\\Opencart_LoginData.xlsx";
 		
 		XLUtility xlutil=new XLUtility(path);
 		
@@ -103,17 +104,15 @@ public class TC_003_LoginDDT extends BaseClass{
 				
 		String logindata[][]=new String[totalrows][totalcols];
 		
-		//for loop gets data from excel, iterates, and stores in 2 dimensional array
 		for(int i=1;i<=totalrows;i++)  //1
 		{		
 			for(int j=0;j<totalcols;j++)  //0
 			{
-				logindata[i-1][j]= xlutil.getCellData("Sheet1",i, j);  //1,0 2 dimensional array
+				logindata[i-1][j]= xlutil.getCellData("Sheet1",i, j);  //1,0
 			}
 		}
 	return logindata;
 				
-	}	
-	
+	}
+		
 }
-

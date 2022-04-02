@@ -1,0 +1,10 @@
+/Users/danielavazquez/eclipse-workspace/Opencart_V121/src/test/java/pageObjects/AccountRegistrationPage.java
+/Users/danielavazquez/eclipse-workspace/Opencart_V121/src/test/java/utilities/ExtentReportManager.java
+/Users/danielavazquez/eclipse-workspace/Opencart_V121/src/test/java/testBase/BaseClass.java
+/Users/danielavazquez/eclipse-workspace/Opencart_V121/src/test/java/testCases/TC_002_Login.java
+/Users/danielavazquez/eclipse-workspace/Opencart_V121/src/test/java/testCases/TC_001_AccountRegistration.java
+/Users/danielavazquez/eclipse-workspace/Opencart_V121/src/test/java/testCases/TC_003_LoginDDT.java
+/Users/danielavazquez/eclipse-workspace/Opencart_V121/src/test/java/pageObjects/MyAccountPage.java
+/Users/danielavazquez/eclipse-workspace/Opencart_V121/src/test/java/utilities/XLUtility.java
+/Users/danielavazquez/eclipse-workspace/Opencart_V121/src/test/java/pageObjects/HomePage.java
+/Users/danielavazquez/eclipse-workspace/Opencart_V121/src/test/java/pageObjects/LoginPage.java

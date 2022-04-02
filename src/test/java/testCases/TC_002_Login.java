@@ -9,7 +9,7 @@ import testBase.BaseClass;
 
 public class TC_002_Login extends BaseClass{
 	
-	@Test
+	@Test(groups={"sanity","master"})
 	public void test_Login()
 	{
 		logger.info(" Starting TC_002_Login ");
@@ -65,4 +65,3 @@ public class TC_002_Login extends BaseClass{
 	
 	
 }
-

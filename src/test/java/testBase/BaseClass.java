@@ -24,22 +24,20 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 
 	public WebDriver driver;
-	public Logger logger; //Log4j Logging
-	public ResourceBundle rb; //to read config.properties
+	public Logger logger; // For logging
+	public ResourceBundle rd;  // to read config.properties
 	
-	@BeforeClass() 
+	
+	@BeforeClass(groups= {"master","sanity","regression"})
 	@Parameters({"browser"})
-
 	public void setup(String br)
 	{
+		//Load config.properties file
+		rd=ResourceBundle.getBundle("config");
 		
-		//Load config.properties
-		rb= ResourceBundle.getBundle("config"); 
-			
-		//Log4j Logging
-		logger = LogManager.getLogger(this.getClass());
+		//Logging
+		logger=LogManager.getLogger(this.getClass()); 
 		
-		//Drivers
 		if(br.equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
@@ -60,17 +58,28 @@ public class BaseClass {
 			logger.info("Launched Firefox Browser");
 		
 		}
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
 	}
-	
-	@AfterClass
+
+	@AfterClass(groups= {"master","sanity","regression"})
 	public void tearDown()
 	{
-	driver.quit();
+		driver.quit();
+	}
+	
+	public void captureScreen(WebDriver driver, String tname) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		File target = new File(System.getProperty("user.dir") + "\\screenshots\\" + tname + ".png");
+		FileUtils.copyFile(source, target);
 	}
 	
 	
-	public String randomestring() {
+	
+	public String randomestring() 
+	{
 		String generatedString = RandomStringUtils.randomAlphabetic(5);
 		return (generatedString);
 	}
@@ -79,14 +88,4 @@ public class BaseClass {
 		String generatedString2 = RandomStringUtils.randomNumeric(5);
 		return (Integer.parseInt(generatedString2));
 	}
-	
-	public void captureScreen(WebDriver driver, String tname) throws IOException {
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		File target = new File(System.getProperty("user.dir") + "/screenshots/" + tname + ".png");
-		FileUtils.copyFile(source, target);
-	}
-	
-	
-	
 }

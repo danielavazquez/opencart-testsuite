@@ -1,5 +1,6 @@
 package testCases;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,7 +10,8 @@ import testBase.BaseClass;
 
 public class TC_001_AccountRegistration extends BaseClass{
 	
-	@Test
+	
+	@Test(groups={"regression","master"})
 	public void test_accout_Registration()
 	{
 		logger.info(" Starting TC_001_AccountRegistration ");
