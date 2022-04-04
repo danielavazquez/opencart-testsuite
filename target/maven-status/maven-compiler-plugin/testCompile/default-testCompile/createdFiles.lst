@@ -1,0 +1,4 @@
+utilities/ExtentReportManager.class
+testBase/BaseClass.class
+pageObjects/MyAccountPage.class
+pageObjects/AccountRegistrationPage.class

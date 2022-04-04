@@ -15,6 +15,7 @@ public class TC_001_AccountRegistration extends BaseClass{
 	public void test_accout_Registration()
 	{
 		logger.info(" Starting TC_001_AccountRegistration ");
+		logger.info(" Starting TC_001_AccountRegistration ");
 		
 		try
 		{
