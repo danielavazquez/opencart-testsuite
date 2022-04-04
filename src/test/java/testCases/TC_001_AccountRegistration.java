@@ -14,9 +14,7 @@ public class TC_001_AccountRegistration extends BaseClass{
 	@Test(groups={"regression","master"})
 	public void test_accout_Registration()
 	{
-		logger.info(" Starting TC_001_AccountRegistration ");
-		logger.info(" Starting TC_001_AccountRegistration ");
-		
+		logger.info(" Starting TC_001_AccountRegistration ");		
 		try
 		{
 			driver.get(rb.getString("appURL"));
