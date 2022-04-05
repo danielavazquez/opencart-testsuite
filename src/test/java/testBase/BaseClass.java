@@ -25,7 +25,7 @@ public class BaseClass {
 
 	public WebDriver driver;
 	public Logger logger; // For logging
-	public ResourceBundle rd;  // to read config.properties
+	public ResourceBundle rb;  // to read config.properties
 	
 	
 	@BeforeClass(groups= {"master","sanity","regression"})
@@ -33,7 +33,7 @@ public class BaseClass {
 	public void setup(String br)
 	{
 		//Load config.properties file
-		rd=ResourceBundle.getBundle("config");
+		rb=ResourceBundle.getBundle("config");
 		
 		//Logging
 		logger=LogManager.getLogger(this.getClass()); 

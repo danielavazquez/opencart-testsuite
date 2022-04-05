@@ -2,7 +2,6 @@ package testCases;
 
 import java.io.IOException;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
