@@ -25,7 +25,7 @@ public class XLUtility {
 	public CellStyle style;   
 	String path;
 	
-	public XLUtility(String path) //constructor every time we use excel spreadsheet
+	public XLUtility(String path)
 	{
 		this.path=path;
 	}
